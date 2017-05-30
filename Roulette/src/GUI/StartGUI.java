@@ -5,7 +5,6 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import java.awt.Color;
 import javax.swing.JTextField;
-import java.awt.BorderLayout;
 import javax.swing.JButton;
 import java.awt.Font;
 import javax.swing.SwingConstants;

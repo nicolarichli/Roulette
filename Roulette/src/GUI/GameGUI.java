@@ -11,7 +11,6 @@ import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
-import javax.swing.JTree;
 import javax.swing.border.BevelBorder;
 
 public class GameGUI {
