@@ -1,11 +1,13 @@
 package LOGIC;
 
 import java.util.ArrayList;
+import DATA.*;
 
-public class GameControl implements DataTransmission{
+public class GameControl{
 	Wheel wheel = new Wheel();
-	ArrayList fields = new ArrayList<Field>();
-	ArrayList settedChips = new ArrayList<Chip>();
+	DataTransmission dataTransmission = new DataTransmission();
+	ArrayList fields = new ArrayList();
+	ArrayList settedChips = new ArrayList();
 	
 	public void chipOnField(){
 		
@@ -28,6 +30,30 @@ public class GameControl implements DataTransmission{
 	}
 	
 	public void startRound(){
-		
+		wheel.randNumber(0, 36);
 	}
+	
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
+	NumberField n0 = new NumberField();
 }

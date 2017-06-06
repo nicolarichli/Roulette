@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.border.BevelBorder;
 
-public class GameGUI {
+public class GameGUI implements ActionListener{
 
 	private JFrame frame;
 
@@ -493,5 +493,10 @@ public class GameGUI {
 		lblRunde.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblRunde.setBounds(824, 459, 150, 30);
 		frame.getContentPane().add(lblRunde);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()== btn)		
 	}
 }
