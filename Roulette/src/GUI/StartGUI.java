@@ -72,6 +72,7 @@ public class StartGUI{
 			public void actionPerformed(ActionEvent e) {
 				if(e.getSource() == btnStart){
 					GameGUI gameGUI = new GameGUI();
+					gameGUI.setName(txtName.getText());
 					frame.dispose();
 				}
 			}

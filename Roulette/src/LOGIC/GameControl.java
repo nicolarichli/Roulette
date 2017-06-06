@@ -5,9 +5,9 @@ import DATA.*;
 
 public class GameControl{
 	Wheel wheel = new Wheel();
-	DataTransmission dataTransmission = new DataTransmission();
 	ArrayList<Field> fields = new ArrayList<Field>();
 	ArrayList<Chip> settedChips = new ArrayList<Chip>();
+	Data data = new Data();
 	
 	public void chipOnField(){
 		
@@ -17,20 +17,21 @@ public class GameControl{
 		return false;
 	}
 	
-	public int getRundenzahl(){
-		return 0;
+	public int getRound(){
+		return data.getRound();
 	}
 	
 	public int getMoney(){
-		return 0;
+		return data.getMoney();
 	}
 	
 	public String getName(){
-		return "";
+		return data.getName();
 	}
 	
-	public String setName(String playerName){
-		
+	public void setName(String playerName){
+		String name = playerName;
+		data.setName(name);
 	}
 	
 	public void startRound(){
@@ -81,49 +82,49 @@ public class GameControl{
 	Field hBlack = new HalfField();
 	
 	public void implementFields(){
-	fields.add(n0);
-	fields.add(n1);
-	fields.add(n2);
-	fields.add(n3);
-	fields.add(n4);
-	fields.add(n5);
-	fields.add(n6);
-	fields.add(n7);
-	fields.add(n8);
-	fields.add(n9);
-	fields.add(n10);
-	fields.add(n11);
-	fields.add(n12);
-	fields.add(n13);
-	fields.add(n14);
-	fields.add(n15);
-	fields.add(n16);
-	fields.add(n17);
-	fields.add(n18);
-	fields.add(n19);
-	fields.add(n20);
-	fields.add(n21);
-	fields.add(n22);
-	fields.add(n23);
-	fields.add(n24);
-	fields.add(n25);
-	fields.add(n26);
-	fields.add(n27);
-	fields.add(n28);
-	fields.add(n29);
-	fields.add(n30);
-	fields.add(n31);
-	fields.add(n32);
-	fields.add(n33);
-	fields.add(n34);
-	fields.add(n35);
-	fields.add(n36);
-	
-	fields.add(hUn);
-	fields.add(hGe);
-	fields.add(hRed);
-	fields.add(hBlack);
-	
-}
+		fields.add(n0);
+		fields.add(n1);
+		fields.add(n2);
+		fields.add(n3);
+		fields.add(n4);
+		fields.add(n5);
+		fields.add(n6);
+		fields.add(n7);
+		fields.add(n8);
+		fields.add(n9);
+		fields.add(n10);
+		fields.add(n11);
+		fields.add(n12);
+		fields.add(n13);
+		fields.add(n14);
+		fields.add(n15);
+		fields.add(n16);
+		fields.add(n17);
+		fields.add(n18);
+		fields.add(n19);
+		fields.add(n20);
+		fields.add(n21);
+		fields.add(n22);
+		fields.add(n23);
+		fields.add(n24);
+		fields.add(n25);
+		fields.add(n26);
+		fields.add(n27);
+		fields.add(n28);
+		fields.add(n29);
+		fields.add(n30);
+		fields.add(n31);
+		fields.add(n32);
+		fields.add(n33);
+		fields.add(n34);
+		fields.add(n35);
+		fields.add(n36);
+		
+		fields.add(hUn);
+		fields.add(hGe);
+		fields.add(hRed);
+		fields.add(hBlack);
+		
+	 }
 	
 }

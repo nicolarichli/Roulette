@@ -13,8 +13,13 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.border.BevelBorder;
 
+import LOGIC.GameControl;
+
 public class GameGUI implements ActionListener{
 
+	String name;
+	GameControl gameControl = new GameControl();
+	
 	public JFrame frame;
 	private JPanel panel;
 	private JLabel lbl0;
@@ -62,22 +67,11 @@ public class GameGUI implements ActionListener{
 	private JLabel lblMoney;
 	private JButton btnBereit;
 	private JLabel lblRunde;
-	
-	/**
-	 * Launch the application.
-	 */
-	public void run() {
-		try {
-			GameGUI window = new GameGUI();
-			window.frame.setVisible(true);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 
 	public void setName(String playerName){
-		String name = playerName;
-		
+		this.name = playerName;
+		gameControl.setName(name);
+		lblName.setText(name);
 	}
 	
 	/**
@@ -472,7 +466,7 @@ public class GameGUI implements ActionListener{
 		lbl33.setBounds(737, 100, 65, 65);
 		panel.add(lbl33);
 		
-		lblRot = new JLabel("rot");
+		lblRot = new JLabel("Rot");
 		lblRot.setOpaque(true);
 		lblRot.setHorizontalAlignment(SwingConstants.CENTER);
 		lblRot.setForeground(new Color(255, 204, 0));
@@ -510,14 +504,14 @@ public class GameGUI implements ActionListener{
 		lblUngerade.setBounds(542, 310, 260, 65);
 		panel.add(lblUngerade);
 		
-		lblName = new JLabel("Playername");
+		lblName = new JLabel(name);
 		lblName.setBackground(new Color(0, 0, 0));
 		lblName.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblName.setForeground(new Color(255, 255, 255));
 		lblName.setBounds(10, 459, 150, 30);
 		frame.getContentPane().add(lblName);
 		
-		lblMoney = new JLabel("500.-");
+		lblMoney = new JLabel("CHF 500.-");
 		lblMoney.setForeground(new Color(255, 255, 255));
 		lblMoney.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblMoney.setBounds(200, 459, 150, 30);
@@ -533,7 +527,7 @@ public class GameGUI implements ActionListener{
 		btnBereit.setBounds(675, 459, 150, 30);
 		frame.getContentPane().add(btnBereit);
 		
-		lblRunde = new JLabel("Runde X von 10");
+		lblRunde = new JLabel("Runde 1 von 10");
 		lblRunde.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblRunde.setForeground(new Color(255, 255, 255));
 		lblRunde.setHorizontalAlignment(SwingConstants.RIGHT);
