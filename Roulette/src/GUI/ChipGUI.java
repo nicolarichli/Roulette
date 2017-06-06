@@ -75,11 +75,11 @@ public class ChipGUI {
 		btnCHF25.setBounds(10, 119, 100, 50);
 		panel.add(btnCHF25);
 		btnCHF25.setForeground(new Color(102, 102, 102));
-		btnCHF25.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnCHF25.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		
 		JButton btnCHF250 = new JButton("CHF 250");
 		btnCHF250.setForeground(new Color(102, 102, 102));
-		btnCHF250.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnCHF250.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		btnCHF250.setBounds(236, 119, 100, 50);
 		panel.add(btnCHF250);
 		
@@ -89,7 +89,7 @@ public class ChipGUI {
 			}
 		});
 		btnCHF100.setForeground(new Color(102, 102, 102));
-		btnCHF100.setFont(new Font("Tahoma", Font.PLAIN, 18));
+		btnCHF100.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		btnCHF100.setBounds(123, 119, 100, 50);
 		panel.add(btnCHF100);
 		
