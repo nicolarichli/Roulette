@@ -84,8 +84,8 @@ public class StartGUI implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(e.getSource()==frame){
-			
+		if(e.getSource() == btnStart){
+			GameGUI gameGUI = new GameGUI();
 		}
 	}
 }
