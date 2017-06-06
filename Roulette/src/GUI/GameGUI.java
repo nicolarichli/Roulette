@@ -15,7 +15,7 @@ import javax.swing.border.BevelBorder;
 
 public class GameGUI implements ActionListener{
 
-	JFrame frame;
+	public JFrame frame;
 	private JPanel panel;
 	private JLabel lbl0;
 	private JLabel lbl1;
@@ -66,19 +66,20 @@ public class GameGUI implements ActionListener{
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					GameGUI window = new GameGUI();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+	public void run() {
+		try {
+			GameGUI window = new GameGUI();
+			window.frame.setVisible(true);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
+	public void setName(String playerName){
+		String name = playerName;
+		
+	}
+	
 	/**
 	 * Create the application.
 	 */
@@ -538,6 +539,7 @@ public class GameGUI implements ActionListener{
 		lblRunde.setHorizontalAlignment(SwingConstants.RIGHT);
 		lblRunde.setBounds(824, 459, 150, 30);
 		frame.getContentPane().add(lblRunde);
+		frame.setVisible(true);
 	}
 
 	@Override

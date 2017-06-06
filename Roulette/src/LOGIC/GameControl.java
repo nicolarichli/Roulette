@@ -29,6 +29,10 @@ public class GameControl{
 		return "";
 	}
 	
+	public String setName(String playerName){
+		
+	}
+	
 	public void startRound(){
 		wheel.randNumber(0, 36);
 	}

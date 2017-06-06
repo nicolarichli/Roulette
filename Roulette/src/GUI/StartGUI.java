@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.border.BevelBorder;
 
-public class StartGUI implements ActionListener{
+public class StartGUI{
 
 	private JFrame frame;
 	private JTextField txtName;
@@ -69,7 +69,11 @@ public class StartGUI implements ActionListener{
 		btnStart.setBackground(new Color(0, 0, 0));
 		btnStart.setForeground(Color.WHITE);
 		btnStart.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+			public void actionPerformed(ActionEvent e) {
+				if(e.getSource() == btnStart){
+					GameGUI gameGUI = new GameGUI();
+					frame.dispose();
+				}
 			}
 		});
 		btnStart.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -86,13 +90,5 @@ public class StartGUI implements ActionListener{
 		frame.getContentPane().add(lblTitel);
 		frame.setBounds(100, 100, 1000, 563);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-	}
-
-	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() == btnStart){
-			System.out.println("funkt");
-			GameGUI gameGUI = new GameGUI();
-			gameGUI.frame.setVisible(true);
-		}
 	}
 }
