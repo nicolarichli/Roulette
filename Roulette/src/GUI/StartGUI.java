@@ -17,6 +17,7 @@ public class StartGUI implements ActionListener{
 
 	private JFrame frame;
 	private JTextField txtName;
+	private JButton btnStart;
 
 	/**
 	 * Launch the application.
@@ -59,8 +60,8 @@ public class StartGUI implements ActionListener{
 		frame.getContentPane().add(txtName);
 		txtName.setColumns(10);
 		
-		JButton btnStart = new JButton("Starten");
-		btnStart.setBackground(new Color(0, 0, 0));
+		btnStart = new JButton("Starten");
+		btnStart.setBackground(new Color(255, 255, 255));
 		btnStart.setForeground(new Color(0, 0, 0));
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
@@ -82,9 +83,9 @@ public class StartGUI implements ActionListener{
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
-	@Override
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == btnStart){
+			System.out.println("funkt");
 			GameGUI gameGUI = new GameGUI();
 		}
 	}
