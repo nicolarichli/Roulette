@@ -13,7 +13,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.border.BevelBorder;
 
-public class StartGUI {
+public class StartGUI implements ActionListener{
 
 	private JFrame frame;
 	private JTextField txtName;
@@ -80,5 +80,12 @@ public class StartGUI {
 		frame.getContentPane().add(lblTitel);
 		frame.setBounds(100, 100, 1000, 563);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource()==frame){
+			
+		}
 	}
 }
