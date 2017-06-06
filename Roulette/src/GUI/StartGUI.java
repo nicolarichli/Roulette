@@ -92,6 +92,7 @@ public class StartGUI implements ActionListener{
 		if(e.getSource() == btnStart){
 			System.out.println("funkt");
 			GameGUI gameGUI = new GameGUI();
+			gameGUI.frame.setVisible(true);
 		}
 	}
 }
