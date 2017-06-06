@@ -522,7 +522,12 @@ public class GameGUI implements ActionListener{
 		lblMoney.setBounds(200, 459, 150, 30);
 		frame.getContentPane().add(lblMoney);
 		
+<<<<<<< HEAD
 		btnBereit = new JButton("Bereit");
+=======
+		JButton btnBereit = new JButton("Bereit");
+		btnBereit.setForeground(Color.WHITE);
+>>>>>>> branch 'master' of https://github.com/nicolarichli/Roulette.git
 		btnBereit.setBackground(new Color(0, 0, 0));
 		btnBereit.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnBereit.addActionListener(new ActionListener() {
