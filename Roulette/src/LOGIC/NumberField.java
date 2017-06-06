@@ -1,6 +1,6 @@
 package LOGIC;
 
-public class NumberField {
+public class NumberField extends Field {
 	private int number;
 	
 	public int getMultiplikator(){

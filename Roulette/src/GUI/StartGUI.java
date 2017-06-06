@@ -60,15 +60,14 @@ public class StartGUI implements ActionListener{
 		frame.getContentPane().add(txtName);
 		txtName.setColumns(10);
 		
-<<<<<<< HEAD
+
 		btnStart = new JButton("Starten");
 		btnStart.setBackground(new Color(255, 255, 255));
 		btnStart.setForeground(new Color(0, 0, 0));
-=======
+
 		JButton btnStart = new JButton("Starten");
 		btnStart.setBackground(new Color(0, 0, 0));
 		btnStart.setForeground(Color.WHITE);
->>>>>>> branch 'master' of https://github.com/nicolarichli/Roulette.git
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
