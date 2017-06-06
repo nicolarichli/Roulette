@@ -2,8 +2,11 @@ package LOGIC;
 
 import java.util.ArrayList;
 
-public class GameControl implements DataTransmission{
+import DATA.DataTransmission;
+
+public class GameControl{
 	Wheel wheel = new Wheel();
+	DataTransmission dataTransmission = new DataTransmission();
 	ArrayList fields = new ArrayList<Field>();
 	ArrayList settedChips = new ArrayList<Chip>();
 	

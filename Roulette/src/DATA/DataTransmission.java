@@ -1,5 +1,5 @@
-package LOGIC;
+package DATA;
 
 public interface DataTransmission {
-
+	
 }
