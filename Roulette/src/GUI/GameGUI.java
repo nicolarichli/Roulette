@@ -477,6 +477,7 @@ public class GameGUI {
 		frame.getContentPane().add(lblMoney);
 		
 		JButton btnBereit = new JButton("Bereit");
+		btnBereit.setForeground(Color.WHITE);
 		btnBereit.setBackground(new Color(0, 0, 0));
 		btnBereit.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnBereit.addActionListener(new ActionListener() {

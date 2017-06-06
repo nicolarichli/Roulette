@@ -61,7 +61,7 @@ public class StartGUI {
 		
 		JButton btnStart = new JButton("Starten");
 		btnStart.setBackground(new Color(0, 0, 0));
-		btnStart.setForeground(new Color(0, 0, 0));
+		btnStart.setForeground(Color.WHITE);
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 			}
