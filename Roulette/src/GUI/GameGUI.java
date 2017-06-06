@@ -10,6 +10,8 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 import javax.swing.border.BevelBorder;
 
@@ -74,9 +76,10 @@ public class GameGUI implements ActionListener{
 		lblName.setText(name);
 	}
 	
-	/**
-	 * Create the application.
-	 */
+	public void setChipNumber(int field, int money){
+		gameControl.chipOnField();
+	}
+	
 	public GameGUI() {
 		initialize();
 	}
@@ -104,6 +107,11 @@ public class GameGUI implements ActionListener{
 		lbl0.setForeground(new Color(255, 204, 0));
 		lbl0.setBackground(new Color(0, 0, 0));
 		lbl0.setBounds(22, 100, 65, 195);
+		lbl0.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI chipGUI = new ChipGUI();
+			}		
+		});
 		panel.add(lbl0);
 		
 		lbl3 = new JLabel("3");
@@ -538,7 +546,10 @@ public class GameGUI implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+		if(e.getSource() == lbl0){
+			ChipGUI chipGUI = new ChipGUI();
+			System.out.println("funkt");
+		}
 		
 	}
 

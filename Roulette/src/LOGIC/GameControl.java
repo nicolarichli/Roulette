@@ -10,7 +10,7 @@ public class GameControl{
 	Data data = new Data();
 	
 	public void chipOnField(){
-		
+		Chip chip = new Chip(n0, 10);
 	}
 	
 	public boolean trueField(){
