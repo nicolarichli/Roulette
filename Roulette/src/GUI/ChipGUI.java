@@ -12,36 +12,32 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-public class ChipGUI {
+import LOGIC.GameControl;
 
+public class ChipGUI {
+	
+	GameControl gameControl = new GameControl();
+	
 	private JFrame frame;
 	private JLabel lblCHF;
+	private int nrField = -1;
+	private String halfField;
 	
 	private int settedMoney = 0;
 	
 	public void updateMoney(){
 		lblCHF.setText("CHF " + settedMoney + ".-");
 	}
-	
-	
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ChipGUI window = new ChipGUI();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+		
 
-	public ChipGUI() {
+	public ChipGUI(int nrField) {
 		initialize();
+		this.nrField = nrField;
+	}
+	
+	public ChipGUI(String halfField) {
+		initialize();
+		this.halfField = halfField;
 	}
 
 	/**
@@ -131,7 +127,12 @@ public class ChipGUI {
 		btnOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(e.getSource()==btnOk){
-					
+					if(nrField >= 0){
+						gameControl.chipOnField(nrField, settedMoney);
+					}
+					else if(halfField != null){
+						gameControl.chipOnField(halfField, settedMoney);
+					}
 				}
 			}
 		});

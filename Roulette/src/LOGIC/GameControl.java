@@ -9,7 +9,11 @@ public class GameControl{
 	ArrayList<Chip> settedChips = new ArrayList<Chip>();
 	Data data = new Data();
 	
-	public void chipOnField(){
+	public void chipOnField(int nrField, int money){
+		Chip chip = new Chip(fields.get(nrField), money);
+	}
+	
+	public void chipOnField(String halfField, int money){
 		Chip chip = new Chip(n0, 10);
 	}
 	

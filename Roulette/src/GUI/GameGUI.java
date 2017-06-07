@@ -76,17 +76,12 @@ public class GameGUI implements ActionListener{
 		lblName.setText(name);
 	}
 	
-	public void setChipNumber(int field, int money){
-		gameControl.chipOnField();
-	}
-	
 	public GameGUI() {
 		initialize();
 	}
+	
+	
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(153, 153, 153));
@@ -109,7 +104,7 @@ public class GameGUI implements ActionListener{
 		lbl0.setBounds(22, 100, 65, 195);
 		lbl0.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
-				ChipGUI chipGUI = new ChipGUI();
+				ChipGUI chipGUI = new ChipGUI(0);
 			}		
 		});
 		panel.add(lbl0);
