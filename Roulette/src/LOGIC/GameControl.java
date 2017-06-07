@@ -10,14 +10,19 @@ public class GameControl{
 	Data data = new Data();
 	
 	public void chipOnField(int nrField, int money){
+		implementFields();
 		Chip chip = new Chip(fields.get(nrField), money);
+		settedChips.add(chip);
 	}
 	
 	public void chipOnField(String halfField, int money){
+		implementFields();
 		Chip chip = new Chip(n0, 10);
+		settedChips.add(chip);
 	}
 	
-	public boolean trueField(){
+	public boolean trueField(Chip chip){
+		
 		return false;
 	}
 	
@@ -40,6 +45,11 @@ public class GameControl{
 	
 	public void startRound(){
 		wheel.randNumber(0, 36);
+		for(Chip c : settedChips){
+			if(trueField(c)){
+				c.
+			}
+		}
 	}
 	
 	Field n0 = new NumberField();
