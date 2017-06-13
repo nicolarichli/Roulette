@@ -4,6 +4,8 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JButton;
+import javax.swing.JDialog;
+
 import java.awt.Color;
 import java.awt.Font;
 import javax.swing.JPanel;
@@ -16,9 +18,9 @@ import LOGIC.GameControl;
 
 public class ChipGUI {
 	
-	GameControl gameControl = new GameControl();
+	GameControl gameControl;
 	
-	private JFrame frame;
+	private JDialog frame;
 	private JLabel lblCHF;
 	private int nrField = -1;
 	private String halfField;
@@ -30,24 +32,22 @@ public class ChipGUI {
 	}
 		
 
-	public ChipGUI(int nrField) {
+	public ChipGUI(GameControl gc) {
+		this.gameControl = gc;
 		initialize();
-		this.nrField = nrField;
-	}
-	
-	public ChipGUI(String halfField) {
-		initialize();
-		this.halfField = halfField;
+		
+		
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
 	private void initialize() {
-		frame = new JFrame();
+		frame = new JDialog();
+		frame.setModal(true);
 		frame.getContentPane().setBackground(new Color(204, 204, 204));
 		frame.setBounds(100, 100, 640, 360);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
 		JPanel panel = new JPanel();
@@ -127,21 +127,22 @@ public class ChipGUI {
 		btnOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(e.getSource()==btnOk){
-					if(nrField >= 0){
-						gameControl.chipOnField(nrField, settedMoney);
-					}
-					else if(halfField != null){
-						gameControl.chipOnField(halfField, settedMoney);
-					}
+					//if(gameControl.getMoney()>settedMoney){
+						gameControl.setMoney(gameControl.getMoney()-settedMoney);
+						System.out.println(gameControl.getMoney());
+						frame.dispose();
+					//}
+					//else{
+						frame.dispose();
+					//}
 				}
 			}
 		});
-		frame.getContentPane().add(btnOk);
-		
-		
-		
-		
-	
+		frame.getContentPane().add(btnOk);	
 		frame.setVisible(true);
+	}
+	
+	public int getMoney(){
+		return settedMoney;
 	}
 }

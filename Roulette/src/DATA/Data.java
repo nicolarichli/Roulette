@@ -19,11 +19,11 @@ public class Data implements DataTransmission{
 	}
 
 	public int getMoney() {
-		return 0;
+		return money;
 	}
 
 	public void setMoney(int money) {
-		
+		this.money = money;
 	}
 
 	public String getName() {

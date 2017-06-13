@@ -15,9 +15,12 @@ import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 import javax.swing.border.BevelBorder;
 
+import LOGIC.Chip;
+import LOGIC.Field;
 import LOGIC.GameControl;
+import LOGIC.NumberField;
 
-public class GameGUI implements ActionListener{
+public class GameGUI{
 
 	String name;
 	GameControl gameControl = new GameControl();
@@ -76,11 +79,14 @@ public class GameGUI implements ActionListener{
 		lblName.setText(name);
 	}
 	
-	public GameGUI() {
-		initialize();
+	public void refresh(){
+		lblMoney.setText("CHF " + gameControl.getMoney() + ".-");
 	}
 	
-	
+	public GameGUI(){
+		initialize();
+		gameControl.setMoney(500);
+	}
 
 	private void initialize() {
 		frame = new JFrame();
@@ -104,7 +110,12 @@ public class GameGUI implements ActionListener{
 		lbl0.setBounds(22, 100, 65, 195);
 		lbl0.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
-				ChipGUI chipGUI = new ChipGUI(0);
+				ChipGUI g0 = new ChipGUI(gameControl);
+				refresh();
+				Field n0 = new NumberField();
+				Chip c0 = new Chip(n0, g0.getMoney());
+				gameControl.implementField(n0);
+				gameControl.implementChip(c0);
 			}		
 		});
 		panel.add(lbl0);
@@ -117,6 +128,16 @@ public class GameGUI implements ActionListener{
 		lbl3.setHorizontalAlignment(SwingConstants.CENTER);
 		lbl3.setForeground(new Color(255, 204, 0));
 		lbl3.setBounds(87, 100, 65, 65);
+		lbl3.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g3 = new ChipGUI(gameControl);
+				refresh();
+				Field n3 = new NumberField();
+				Chip c3 = new Chip(n3, g3.getMoney());
+				gameControl.implementField(n3);
+				gameControl.implementChip(c3);
+			}		
+		});
 		panel.add(lbl3);
 		
 		lbl1 = new JLabel("1");
@@ -127,6 +148,16 @@ public class GameGUI implements ActionListener{
 		lbl1.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
 		lbl1.setBackground(new Color(153, 0, 0));
 		lbl1.setBounds(87, 230, 65, 65);
+		lbl1.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g1 = new ChipGUI(gameControl);
+				refresh();
+				Field n1 = new NumberField();
+				Chip c1 = new Chip(n1, g1.getMoney());
+				gameControl.implementField(n1);
+				gameControl.implementChip(c1);
+			}		
+		});
 		panel.add(lbl1);
 		
 		lbl2 = new JLabel("2");
@@ -137,6 +168,16 @@ public class GameGUI implements ActionListener{
 		lbl2.setBorder(null);
 		lbl2.setBackground(new Color(0, 0, 0));
 		lbl2.setBounds(87, 165, 65, 65);
+		lbl2.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g2 = new ChipGUI(gameControl);
+				refresh();
+				Field n2 = new NumberField();
+				Chip c2 = new Chip(n2, g2.getMoney());
+				gameControl.implementField(n2);
+				gameControl.implementChip(c2);
+			}		
+		});
 		panel.add(lbl2);
 		
 		lbl5 = new JLabel("5");
@@ -147,6 +188,16 @@ public class GameGUI implements ActionListener{
 		lbl5.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
 		lbl5.setBackground(new Color(153, 0, 0));
 		lbl5.setBounds(152, 165, 65, 65);
+		lbl5.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g5 = new ChipGUI(gameControl);
+				refresh();
+				Field n5 = new NumberField();
+				Chip c5 = new Chip(n5, g5.getMoney());
+				gameControl.implementField(n5);
+				gameControl.implementChip(c5);
+			}		
+		});
 		panel.add(lbl5);
 		
 		lbl4 = new JLabel("4");
@@ -157,6 +208,16 @@ public class GameGUI implements ActionListener{
 		lbl4.setBorder(null);
 		lbl4.setBackground(Color.BLACK);
 		lbl4.setBounds(152, 230, 65, 65);
+		lbl4.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g4 = new ChipGUI(gameControl);
+				refresh();
+				Field n0 = new NumberField();
+				Chip c0 = new Chip(n0, g0.getMoney());
+				gameControl.implementField(n0);
+				gameControl.implementChip(c0);
+			}		
+		});
 		panel.add(lbl4);
 		
 		lbl6 = new JLabel("6");
@@ -525,6 +586,7 @@ public class GameGUI implements ActionListener{
 		btnBereit.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnBereit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				gameControl.startRound();
 			}
 		});
 		btnBereit.setBounds(675, 459, 150, 30);
@@ -538,14 +600,4 @@ public class GameGUI implements ActionListener{
 		frame.getContentPane().add(lblRunde);
 		frame.setVisible(true);
 	}
-
-	@Override
-	public void actionPerformed(ActionEvent e) {
-		if(e.getSource() == lbl0){
-			ChipGUI chipGUI = new ChipGUI();
-			System.out.println("funkt");
-		}
-		
-	}
-
 }
