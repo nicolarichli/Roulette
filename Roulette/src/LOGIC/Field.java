@@ -5,4 +5,13 @@ public class Field {
 	public int getMultiplikator(){
 		return 0;
 	}
+	
+	public int getNumberField(){
+		return -1;
+	}
+	
+	public String getHalfField(){
+		return null;
+	}
+
 }
