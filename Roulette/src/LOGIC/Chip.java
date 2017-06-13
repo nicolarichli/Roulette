@@ -12,4 +12,8 @@ public class Chip {
 	public Field getField(){
 		return place;
 	}
+	
+	public int getSettedMoney(){
+		return money;
+	}
 }

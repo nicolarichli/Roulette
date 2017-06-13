@@ -127,7 +127,6 @@ public class ChipGUI {
 				if(e.getSource()==btnOk){
 					//if(gameControl.getMoney()>settedMoney){
 						gameControl.setMoney(gameControl.getMoney()-settedMoney);
-						System.out.println(gameControl.getMoney());
 						frame.dispose();
 					//}
 					//else{

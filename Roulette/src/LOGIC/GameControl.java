@@ -16,11 +16,6 @@ public class GameControl{
 		settedChips.add(chip);
 	}
 	
-	public void chipOnField(String halfField, int money){
-		Chip chip = new Chip(n0, 10);
-		settedChips.add(chip);
-	}
-	
 	public boolean trueField(Chip chip){
 		if(chip.getField().getNumberField() >= 0){
 			if (randomNumber == chip.getField().getNumberField()){
@@ -31,7 +26,7 @@ public class GameControl{
 			}
 		}
 		else{
-			return false
+			return false;
 		}
 	}
 	
@@ -57,19 +52,13 @@ public class GameControl{
 	}
 	
 	public void startRound(){
-		wheel.randNumber(0, 36);
+		randomNumber = wheel.randNumber(0, 36);
 		for(Chip c : settedChips){
 			if(trueField(c)){
-				
+				data.setMoney(getMoney() + c.getSettedMoney() * c.getField().getMultiplikator());
 			}
 		}
 	}
-	
-	
-	Field hUn = new HalfField();
-	Field hGe = new HalfField();
-	Field hRed = new HalfField();
-	Field hBlack = new HalfField();
 	
 	public void implementField(Field field){
 		fields.add(field);
