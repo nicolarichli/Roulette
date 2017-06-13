@@ -212,10 +212,10 @@ public class GameGUI{
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g4 = new ChipGUI(gameControl);
 				refresh();
-				Field n0 = new NumberField();
-				Chip c0 = new Chip(n0, g0.getMoney());
-				gameControl.implementField(n0);
-				gameControl.implementChip(c0);
+				Field n4 = new NumberField();
+				Chip c4 = new Chip(n4, g4.getMoney());
+				gameControl.implementField(n4);
+				gameControl.implementChip(c4);
 			}		
 		});
 		panel.add(lbl4);

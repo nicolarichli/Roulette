@@ -35,8 +35,6 @@ public class ChipGUI {
 	public ChipGUI(GameControl gc) {
 		this.gameControl = gc;
 		initialize();
-		
-		
 	}
 
 	/**
