@@ -34,6 +34,10 @@ public class GameControl{
 		return data.getRound();
 	}
 	
+	public void setRound(int round){
+		data.setRound(round);
+	}
+	
 	public int getMoney(){
 		return data.getMoney();
 	}
@@ -53,6 +57,8 @@ public class GameControl{
 	
 	public void startRound(){
 		randomNumber = wheel.randNumber(0, 36);
+		System.out.println("" + randomNumber);
+		setRound(getRound() + 1);
 		for(Chip c : settedChips){
 			if(trueField(c)){
 				data.setMoney(getMoney() + c.getSettedMoney() * c.getField().getMultiplikator());
