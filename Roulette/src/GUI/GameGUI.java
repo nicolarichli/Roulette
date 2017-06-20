@@ -300,7 +300,9 @@ public class GameGUI{
 		lbl6.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g6 = new ChipGUI(gameControl);
-				lbl6.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g6.getMoney() != 0){
+					lbl6.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n6 = new NumberField(6);
 				Chip c6 = new Chip(n6, g6.getMoney());
@@ -321,7 +323,9 @@ public class GameGUI{
 		lbl10.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g10 = new ChipGUI(gameControl);
-				lbl10.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g10.getMoney() != 0){
+					lbl10.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n10 = new NumberField(10);
 				Chip c10 = new Chip(n10, g10.getMoney());
@@ -342,7 +346,9 @@ public class GameGUI{
 		lbl7.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g7 = new ChipGUI(gameControl);
-				lbl7.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g7.getMoney() != 0){
+					lbl7.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n7 = new NumberField(7);
 				Chip c7 = new Chip(n7, g7.getMoney());
@@ -384,7 +390,9 @@ public class GameGUI{
 		lbl11.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g11 = new ChipGUI(gameControl);
-				lbl11.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g11.getMoney() != 0){
+					lbl11.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n11 = new NumberField(11);
 				Chip c11 = new Chip(n11, g11.getMoney());
@@ -405,7 +413,9 @@ public class GameGUI{
 		lbl12.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g12 = new ChipGUI(gameControl);
-				lbl12.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g12.getMoney() != 0){
+					lbl12.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n12 = new NumberField(12);
 				Chip c12 = new Chip(n12, g12.getMoney());
@@ -426,7 +436,9 @@ public class GameGUI{
 		lbl9.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g9 = new ChipGUI(gameControl);
-				lbl9.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g9.getMoney() != 0){
+					lbl9.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n9 = new NumberField(12);
 				Chip c9 = new Chip(n9, g9.getMoney());
@@ -447,7 +459,9 @@ public class GameGUI{
 		lbl16.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g16 = new ChipGUI(gameControl);
-				lbl16.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g16.getMoney() != 0){
+					lbl16.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n16 = new NumberField(16);
 				Chip c16 = new Chip(n16, g16.getMoney());
@@ -468,7 +482,9 @@ public class GameGUI{
 		lbl13.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g13 = new ChipGUI(gameControl);
-				lbl13.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g13.getMoney() != 0){
+					lbl13.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n13 = new NumberField(13);
 				Chip c13 = new Chip(n13, g13.getMoney());
@@ -489,7 +505,9 @@ public class GameGUI{
 		lbl14.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g14 = new ChipGUI(gameControl);
-				lbl14.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g14.getMoney() != 0){
+					lbl14.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n14 = new NumberField(14);
 				Chip c14 = new Chip(n14, g14.getMoney());
@@ -510,7 +528,9 @@ public class GameGUI{
 		lbl17.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g17 = new ChipGUI(gameControl);
-				lbl17.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g17.getMoney() != 0){
+					lbl17.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n17 = new NumberField(17);
 				Chip c17 = new Chip(n17, g17.getMoney());
@@ -531,7 +551,9 @@ public class GameGUI{
 		lbl18.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g18 = new ChipGUI(gameControl);
-				lbl18.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g18.getMoney() != 0){
+					lbl18.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n18 = new NumberField(18);
 				Chip c18 = new Chip(n18, g18.getMoney());
@@ -552,7 +574,9 @@ public class GameGUI{
 		lbl15.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g15 = new ChipGUI(gameControl);
-				lbl15.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g15.getMoney() != 0){
+					lbl15.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n15 = new NumberField(15);
 				Chip c15 = new Chip(n15, g15.getMoney());
@@ -573,7 +597,9 @@ public class GameGUI{
 		lbl34.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g34 = new ChipGUI(gameControl);
-				lbl34.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g34.getMoney() != 0){
+					lbl34.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n34 = new NumberField(34);
 				Chip c34 = new Chip(n34, g34.getMoney());
@@ -594,7 +620,9 @@ public class GameGUI{
 		lbl31.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g31 = new ChipGUI(gameControl);
-				lbl31.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g31.getMoney() != 0){
+					lbl31.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n31 = new NumberField(12);
 				Chip c31 = new Chip(n31, g31.getMoney());
@@ -615,8 +643,9 @@ public class GameGUI{
 		lbl28.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g28 = new ChipGUI(gameControl);
-				lbl28.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (g28.getMoney() != 0){
+					lbl28.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field n28 = new NumberField(28);
 				Chip c28 = new Chip(n28, g28.getMoney());
 				gameControl.implementField(n28);
@@ -636,8 +665,9 @@ public class GameGUI{
 		lbl25.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g25 = new ChipGUI(gameControl);
-				lbl25.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (g25.getMoney() != 0){
+					lbl25.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field n25 = new NumberField(25);
 				Chip c25 = new Chip(n25, g25.getMoney());
 				gameControl.implementField(n25);
@@ -657,8 +687,9 @@ public class GameGUI{
 		lbl22.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g22 = new ChipGUI(gameControl);
-				lbl22.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (g22.getMoney() != 0){
+					lbl22.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field n22 = new NumberField(22);
 				Chip c22 = new Chip(n22, g22.getMoney());
 				gameControl.implementField(n22);
@@ -678,8 +709,9 @@ public class GameGUI{
 		lbl19.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g19 = new ChipGUI(gameControl);
-				lbl19.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (g19.getMoney() != 0){
+					lbl19.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field n19 = new NumberField(19);
 				Chip c19 = new Chip(n19, g19.getMoney());
 				gameControl.implementField(n19);
@@ -699,8 +731,9 @@ public class GameGUI{
 		lbl20.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g20 = new ChipGUI(gameControl);
-				lbl20.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (g20.getMoney() != 0){
+					lbl20.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field n20 = new NumberField(20);
 				Chip c20 = new Chip(n20, g20.getMoney());
 				gameControl.implementField(n20);
@@ -720,7 +753,9 @@ public class GameGUI{
 		lbl21.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g21 = new ChipGUI(gameControl);
-				lbl21.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g21.getMoney() != 0){
+					lbl21.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n21 = new NumberField(21);
 				Chip c21 = new Chip(n21, g21.getMoney());
@@ -741,7 +776,9 @@ public class GameGUI{
 		lbl24.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g24 = new ChipGUI(gameControl);
-				lbl24.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g24.getMoney() != 0){
+					lbl24.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n24 = new NumberField(24);
 				Chip c24 = new Chip(n24, g24.getMoney());
@@ -762,8 +799,9 @@ public class GameGUI{
 		lbl23.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g23 = new ChipGUI(gameControl);
-				lbl23.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (g23.getMoney() != 0){
+					lbl23.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field n23 = new NumberField(23);
 				Chip c23 = new Chip(n23, g23.getMoney());
 				gameControl.implementField(n23);
@@ -783,8 +821,9 @@ public class GameGUI{
 		lbl26.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g26 = new ChipGUI(gameControl);
-				lbl26.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (g26.getMoney() != 0){
+					lbl26.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field n26 = new NumberField(26);
 				Chip c26 = new Chip(n26, g26.getMoney());
 				gameControl.implementField(n26);
@@ -804,8 +843,9 @@ public class GameGUI{
 		lbl27.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g27 = new ChipGUI(gameControl);
-				lbl27.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (g27.getMoney() != 0){
+					lbl27.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field n27 = new NumberField(27);
 				Chip c27 = new Chip(n27, g27.getMoney());
 				gameControl.implementField(n27);
@@ -825,7 +865,9 @@ public class GameGUI{
 		lbl30.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g30 = new ChipGUI(gameControl);
-				lbl30.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g30.getMoney() != 0){
+					lbl30.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n30 = new NumberField(30);
 				Chip c30 = new Chip(n30, g30.getMoney());
@@ -846,7 +888,9 @@ public class GameGUI{
 		lbl29.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g29 = new ChipGUI(gameControl);
-				lbl29.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g29.getMoney() != 0){
+					lbl29.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n29 = new NumberField(29);
 				Chip c29 = new Chip(n29, g29.getMoney());
@@ -867,7 +911,9 @@ public class GameGUI{
 		lbl32.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g32 = new ChipGUI(gameControl);
-				lbl32.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				if (g32.getMoney() != 0){
+					lbl32.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}
 				refresh();
 				Field n32 = new NumberField(32);
 				Chip c32 = new Chip(n32, g32.getMoney());
@@ -888,8 +934,9 @@ public class GameGUI{
 		lbl35.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g35 = new ChipGUI(gameControl);
-				lbl35.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (g35.getMoney() != 0){
+					lbl35.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field n35 = new NumberField(35);
 				Chip c35 = new Chip(n35, g35.getMoney());
 				gameControl.implementField(n35);
@@ -909,8 +956,9 @@ public class GameGUI{
 		lbl36.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g36 = new ChipGUI(gameControl);
-				lbl36.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (g36.getMoney() != 0){
+					lbl36.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field n36 = new NumberField(36);
 				Chip c36 = new Chip(n36, g36.getMoney());
 				gameControl.implementField(n36);
@@ -930,8 +978,9 @@ public class GameGUI{
 		lbl33.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g33 = new ChipGUI(gameControl);
-				lbl33.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (g33.getMoney() != 0){
+					lbl33.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field n33 = new NumberField(33);
 				Chip c33 = new Chip(n33, g33.getMoney());
 				gameControl.implementField(n33);
@@ -951,8 +1000,9 @@ public class GameGUI{
 		lblRot.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI gRot = new ChipGUI(gameControl);
-				lblRot.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (gRot.getMoney() != 0){
+					lblRot.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field hfRot = new HalfField("rot");
 				Chip cRot = new Chip(hfRot, gRot.getMoney());
 				gameControl.implementField(hfRot);
@@ -972,8 +1022,9 @@ public class GameGUI{
 		lblSchwarz.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI gSchwarz = new ChipGUI(gameControl);
-				lblSchwarz.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (gSchwarz.getMoney() != 0){
+					lblSchwarz.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field hfSchwarz = new HalfField("schwarz");
 				Chip cSchwarz = new Chip(hfSchwarz, gSchwarz.getMoney());
 				gameControl.implementField(hfSchwarz);
@@ -992,8 +1043,9 @@ public class GameGUI{
 		lblGerade.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI gGerade = new ChipGUI(gameControl);
-				lblGerade.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (gGerade.getMoney() != 0){
+					lblGerade.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field hfGerade = new HalfField("gerade");
 				Chip cGerade = new Chip(hfGerade, gGerade.getMoney());
 				gameControl.implementField(hfGerade);
@@ -1012,8 +1064,9 @@ public class GameGUI{
 		lblUngerade.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI gUngerade = new ChipGUI(gameControl);
-				lblUngerade.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (gUngerade.getMoney() != 0){
+					lblUngerade.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field hfUngerade = new HalfField("ungerade");
 				Chip cUngerade = new Chip(hfUngerade, gUngerade.getMoney());
 				gameControl.implementField(hfUngerade);
