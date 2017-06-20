@@ -8,7 +8,7 @@ public class NumberField extends Field {
 	}
 	
 	public int getNumberField(){
-		return -1;
+		return number;
 	}
 	
 	public NumberField(int number){

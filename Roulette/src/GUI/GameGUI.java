@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -86,13 +87,58 @@ public class GameGUI{
 	
 	public void refresh(){
 		lblMoney.setText("CHF " + gameControl.getMoney() + ".-");
+		lblRunde.setText("Runde " + gameControl.getRound() + " von 10");
+	}
+	
+	public void resetBorders(){
+		lbl0.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl1.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl2.setBorder(null);
+		lbl3.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl4.setBorder(null);
+		lbl5.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl6.setBorder(null);
+		lbl7.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl8.setBorder(null);
+		lbl9.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl10.setBorder(null);
+		lbl11.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl12.setBorder(null);
+		lbl13.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl14.setBorder(null);
+		lbl15.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl16.setBorder(null);
+		lbl17.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl18.setBorder(null);
+		lbl19.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl20.setBorder(null);
+		lbl21.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl22.setBorder(null);
+		lbl23.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl24.setBorder(null);
+		lbl25.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl26.setBorder(null);
+		lbl27.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl28.setBorder(null);
+		lbl29.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl30.setBorder(null);
+		lbl31.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl32.setBorder(null);
+		lbl33.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl34.setBorder(null);
+		lbl35.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lbl36.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lblGerade.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lblUngerade.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lblSchwarz.setBorder(BorderFactory.createLineBorder(Color.BLACK));
+		lblRot.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 	}
 	
 	public GameGUI(){
 		initialize();
 		gameControl.setMoney(500);
 	}
-
+	
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(153, 153, 153));
@@ -941,19 +987,136 @@ public class GameGUI{
 		btnBereit.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnBereit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				resetBorders();
 				gameControl.startRound();
 				random = gameControl.getRandom();
+				refresh();
 				switch (random){
 					case 0:
 						lbl0.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
 					case 1:
-						
+						lbl1.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 2:
+						lbl2.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 3:
+						lbl3.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 4:
+						lbl4.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 5:
+						lbl5.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 6:
+						lbl6.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 7:
+						lbl7.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 8:
+						lbl8.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 9:
+						lbl9.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 10:
+						lbl10.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 11:
+						lbl11.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 12:
+						lbl12.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 13:
+						lbl13.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 14:
+						lbl14.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 15:
+						lbl15.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 16:
+						lbl16.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 17:
+						lbl17.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 18:
+						lbl18.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 19:
+						lbl19.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 20:
+						lbl20.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 21:
+						lbl21.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 22:
+						lbl22.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 23:
+						lbl23.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 24:
+						lbl24.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 25:
+						lbl25.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 26:
+						lbl26.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 27:
+						lbl27.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 28:
+						lbl28.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 29:
+						lbl29.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 30:
+						lbl30.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 31:
+						lbl31.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 32:
+						lbl32.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 33:
+						lbl33.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 34:
+						lbl34.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 35:
+						lbl35.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					case 36:
+						lbl36.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+						break;
+					default:
+				}
+				
+				if(random %2 == 0){
+					lblGerade.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					lblSchwarz.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+				}
+				else if(random %2 != 0){
+					lblUngerade.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					lblRot.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
 				}
 					
-				
-				
-				(random == 0){
-					lbl0.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+				if(gameControl.gameEnd()){
+					EndGUI endGui = new EndGUI(gameControl);
 				}
 			}
 		});

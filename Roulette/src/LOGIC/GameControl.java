@@ -27,10 +27,10 @@ public class GameControl{
 			}
 		}
 		else{
-			if(randomNumber%2 == 0 && chip.getField().getHalfField().equals("gerade")){
+			if(randomNumber%2 == 0 && (chip.getField().getHalfField().equals("gerade") || chip.getField().getHalfField().equals("schwarz"))){
 				return true;
 			}
-			else if(randomNumber%2 != 0 && chip.getField().getHalfField().equals("ungerade")){
+			else if(randomNumber%2 != 0 && (chip.getField().getHalfField().equals("ungerade") || chip.getField().getHalfField().equals("rot"))){
 				return true;
 			}
 			else{
@@ -60,13 +60,11 @@ public class GameControl{
 	}
 	
 	public void setName(String playerName){
-		String name = playerName;
-		data.setName(name);
+		data.setName(playerName);
 	}
 	
 	public void startRound(){
 		randomNumber = wheel.randNumber(0, 36);
-		System.out.println("" + randomNumber);
 		setRound(getRound() + 1);
 		for(Chip c : settedChips){
 			if(trueField(c)){
@@ -86,6 +84,15 @@ public class GameControl{
 	
 	public int getRandom(){
 		return randomNumber;
+	}
+	
+	public boolean gameEnd(){
+		if(getRound() >= 10 || getMoney() <= 0){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 	
 }

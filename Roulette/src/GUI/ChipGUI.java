@@ -65,8 +65,10 @@ public class ChipGUI {
 		btnCHF25.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(e.getSource() == btnCHF25){
-					settedMoney += 25; 
-					updateMoney();
+					if(gameControl.getMoney()-settedMoney >= 25){
+						settedMoney += 25; 
+						updateMoney();
+					}
 				}
 			}
 		});
@@ -83,8 +85,10 @@ public class ChipGUI {
 		btnCHF250.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(e.getSource()==btnCHF250){
-					settedMoney += 250; 
-					updateMoney();
+					if(gameControl.getMoney()-settedMoney >= 250){
+						settedMoney += 250; 
+						updateMoney();
+					}
 				}
 			}
 		});
@@ -94,8 +98,10 @@ public class ChipGUI {
 		btnCHF100.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				if(e.getSource() == btnCHF100){
-					settedMoney += 100; 
-					updateMoney();
+					if(gameControl.getMoney()-settedMoney >= 100){
+						settedMoney += 100; 
+						updateMoney();
+					}
 				}
 			}
 		});

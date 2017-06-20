@@ -3,19 +3,19 @@ package DATA;
 public class Data implements DataTransmission{
 	String playerName;
 	int money;
-	int round;
+	int round = 1;
 
 	public void setName(String playerName) {
 		this.playerName = playerName;
 	}
 
 	public int getRound() {
-		return 0;
+		return round;
 	}
 
 	@Override
 	public void setRound(int round) {
-		
+		this.round = round;
 	}
 
 	public int getMoney() {
