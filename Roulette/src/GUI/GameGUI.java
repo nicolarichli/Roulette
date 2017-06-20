@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -943,17 +944,82 @@ public class GameGUI{
 			public void actionPerformed(ActionEvent arg0) {
 				gameControl.startRound();
 				random = gameControl.getRandom();
+				refresh();
 				switch (random){
 					case 0:
 						lbl0.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
 					case 1:
-						
-				}
-					
-				
-				
-				(random == 0){
-					lbl0.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+						lbl1.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 2:
+						lbl2.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 3:
+						lbl3.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 4:
+						lbl4.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 5:
+						lbl5.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 6:
+						lbl6.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 7:
+						lbl7.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 8:
+						lbl8.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 9:
+						lbl9.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 10:
+						lbl10.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 11:
+						lbl11.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 12:
+						lbl12.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 13:
+						lbl13.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 14:
+						lbl14.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 15:
+						lbl15.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 16:
+						lbl16.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 17:
+						lbl17.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 18:
+						lbl18.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 19:
+						lbl19.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 20:
+						lbl20.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 21:
+						lbl21.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 22:
+						lbl22.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 23:
+						lbl23.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 24:
+						lbl24.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 25:
+						lbl25.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 26:
+						lbl26.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 27:
+						lbl27.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 28:
+						lbl28.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 29:
+						lbl29.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 30:
+						lbl30.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 31:
+						lbl31.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 32:
+						lbl32.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 33:
+						lbl33.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 34:
+						lbl34.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 35:
+						lbl35.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 36:
+						lbl36.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
 				}
 			}
 		});
