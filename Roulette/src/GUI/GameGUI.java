@@ -369,8 +369,9 @@ public class GameGUI{
 		lbl8.addMouseListener(new MouseAdapter(){
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g8 = new ChipGUI(gameControl);
-				lbl8.setBorder(BorderFactory.createLineBorder(Color.GREEN));
-				refresh();
+				if (g8.getMoney() != 0){
+					lbl8.setBorder(BorderFactory.createLineBorder(Color.GREEN));
+				}				refresh();
 				Field n8 = new NumberField(8);
 				Chip c8 = new Chip(n8, g8.getMoney());
 				gameControl.implementField(n8);
