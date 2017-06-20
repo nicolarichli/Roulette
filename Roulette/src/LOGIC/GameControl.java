@@ -9,6 +9,7 @@ public class GameControl{
 	ArrayList<Field> fields = new ArrayList<Field>();
 	ArrayList<Chip> settedChips = new ArrayList<Chip>();
 	DataTransmission data = new Data();
+	Chip isChip;
 	
 	int randomNumber;
 	
@@ -26,7 +27,15 @@ public class GameControl{
 			}
 		}
 		else{
-			return false;
+			if(randomNumber%2 == 0 && chip.getField().getHalfField().equals("gerade")){
+				return true;
+			}
+			else if(randomNumber%2 != 0 && chip.getField().getHalfField().equals("ungerade")){
+				return true;
+			}
+			else{
+				return false;
+			}
 		}
 	}
 	
@@ -64,6 +73,7 @@ public class GameControl{
 				data.setMoney(getMoney() + c.getSettedMoney() * c.getField().getMultiplikator());
 			}
 		}
+		settedChips.clear();
 	}
 	
 	public void implementField(Field field){
@@ -72,6 +82,10 @@ public class GameControl{
 	
 	public void implementChip(Chip chip){
 		settedChips.add(chip);
+	}
+	
+	public int getRandom(){
+		return randomNumber;
 	}
 	
 }

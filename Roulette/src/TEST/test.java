@@ -1,19 +1,7 @@
 package TEST;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
-
-import LOGIC.GameControl;
-import LOGIC.Wheel;
-
-public class test {
-
-	@Test
-	public void test() {
-		Wheel w = new Wheel();
-		assertTrue(w.randNumber(0, 36) >= 0);
-		assertTrue(w.randNumber(0, 36) <= 36);
+public class test{
+	public static void main(String[] args) {
+		System.out.println(5%2 == 1);
 	}
-
 }

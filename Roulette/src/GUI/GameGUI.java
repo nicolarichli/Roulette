@@ -14,16 +14,21 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.ActionEvent;
 import javax.swing.border.BevelBorder;
+import javax.swing.border.Border;
+import javax.swing.border.LineBorder;
 
 import LOGIC.Chip;
 import LOGIC.Field;
 import LOGIC.GameControl;
+import LOGIC.HalfField;
 import LOGIC.NumberField;
 
 public class GameGUI{
 
 	String name;
 	GameControl gameControl = new GameControl();
+	
+	private int random;
 	
 	public JFrame frame;
 	private JPanel panel;
@@ -552,8 +557,8 @@ public class GameGUI{
 			public void mouseClicked(MouseEvent e){
 				ChipGUI g25 = new ChipGUI(gameControl);
 				refresh();
-				Field n25 = new NumberField(12);
-				Chip c12 = new Chip(n25, g25.getMoney());
+				Field n25 = new NumberField(25);
+				Chip c25 = new Chip(n25, g25.getMoney());
 				gameControl.implementField(n25);
 				gameControl.implementChip(c25);
 			}		
@@ -648,6 +653,16 @@ public class GameGUI{
 		lbl24.setBorder(null);
 		lbl24.setBackground(Color.BLACK);
 		lbl24.setBounds(542, 100, 65, 65);
+		lbl24.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g24 = new ChipGUI(gameControl);
+				refresh();
+				Field n24 = new NumberField(24);
+				Chip c24 = new Chip(n24, g24.getMoney());
+				gameControl.implementField(n24);
+				gameControl.implementChip(c24);
+			}		
+		});
 		panel.add(lbl24);
 		
 		lbl23 = new JLabel("23");
@@ -658,6 +673,16 @@ public class GameGUI{
 		lbl23.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
 		lbl23.setBackground(new Color(153, 0, 0));
 		lbl23.setBounds(542, 165, 65, 65);
+		lbl23.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g23 = new ChipGUI(gameControl);
+				refresh();
+				Field n23 = new NumberField(23);
+				Chip c23 = new Chip(n23, g23.getMoney());
+				gameControl.implementField(n23);
+				gameControl.implementChip(c23);
+			}		
+		});
 		panel.add(lbl23);
 		
 		lbl26 = new JLabel("26");
@@ -668,6 +693,16 @@ public class GameGUI{
 		lbl26.setBorder(null);
 		lbl26.setBackground(Color.BLACK);
 		lbl26.setBounds(607, 165, 65, 65);
+		lbl26.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g26 = new ChipGUI(gameControl);
+				refresh();
+				Field n26 = new NumberField(26);
+				Chip c26 = new Chip(n26, g26.getMoney());
+				gameControl.implementField(n26);
+				gameControl.implementChip(c26);
+			}		
+		});
 		panel.add(lbl26);
 		
 		lbl27 = new JLabel("27");
@@ -678,6 +713,16 @@ public class GameGUI{
 		lbl27.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
 		lbl27.setBackground(new Color(153, 0, 0));
 		lbl27.setBounds(607, 100, 65, 65);
+		lbl27.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g27 = new ChipGUI(gameControl);
+				refresh();
+				Field n27 = new NumberField(27);
+				Chip c27 = new Chip(n27, g27.getMoney());
+				gameControl.implementField(n27);
+				gameControl.implementChip(c27);
+			}		
+		});
 		panel.add(lbl27);
 		
 		lbl30 = new JLabel("30");
@@ -688,6 +733,16 @@ public class GameGUI{
 		lbl30.setBorder(null);
 		lbl30.setBackground(Color.BLACK);
 		lbl30.setBounds(672, 100, 65, 65);
+		lbl30.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g30 = new ChipGUI(gameControl);
+				refresh();
+				Field n30 = new NumberField(30);
+				Chip c30 = new Chip(n30, g30.getMoney());
+				gameControl.implementField(n30);
+				gameControl.implementChip(c30);
+			}		
+		});
 		panel.add(lbl30);
 		
 		lbl29 = new JLabel("29");
@@ -698,6 +753,16 @@ public class GameGUI{
 		lbl29.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
 		lbl29.setBackground(new Color(153, 0, 0));
 		lbl29.setBounds(672, 165, 65, 65);
+		lbl29.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g29 = new ChipGUI(gameControl);
+				refresh();
+				Field n29 = new NumberField(29);
+				Chip c29 = new Chip(n29, g29.getMoney());
+				gameControl.implementField(n29);
+				gameControl.implementChip(c29);
+			}		
+		});
 		panel.add(lbl29);
 		
 		lbl32 = new JLabel("32");
@@ -708,6 +773,16 @@ public class GameGUI{
 		lbl32.setBorder(null);
 		lbl32.setBackground(Color.BLACK);
 		lbl32.setBounds(737, 165, 65, 65);
+		lbl32.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g32 = new ChipGUI(gameControl);
+				refresh();
+				Field n32 = new NumberField(32);
+				Chip c32 = new Chip(n32, g32.getMoney());
+				gameControl.implementField(n32);
+				gameControl.implementChip(c32);
+			}		
+		});
 		panel.add(lbl32);
 		
 		lbl35 = new JLabel("35");
@@ -718,6 +793,16 @@ public class GameGUI{
 		lbl35.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
 		lbl35.setBackground(new Color(153, 0, 0));
 		lbl35.setBounds(802, 165, 65, 65);
+		lbl35.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g35 = new ChipGUI(gameControl);
+				refresh();
+				Field n35 = new NumberField(35);
+				Chip c35 = new Chip(n35, g35.getMoney());
+				gameControl.implementField(n35);
+				gameControl.implementChip(c35);
+			}		
+		});
 		panel.add(lbl35);
 		
 		lbl36 = new JLabel("36");
@@ -728,6 +813,16 @@ public class GameGUI{
 		lbl36.setBorder(null);
 		lbl36.setBackground(Color.BLACK);
 		lbl36.setBounds(802, 100, 65, 65);
+		lbl36.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g36 = new ChipGUI(gameControl);
+				refresh();
+				Field n36 = new NumberField(36);
+				Chip c36 = new Chip(n36, g36.getMoney());
+				gameControl.implementField(n36);
+				gameControl.implementChip(c36);
+			}		
+		});
 		panel.add(lbl36);
 		
 		lbl33 = new JLabel("33");
@@ -738,6 +833,16 @@ public class GameGUI{
 		lbl33.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
 		lbl33.setBackground(new Color(153, 0, 0));
 		lbl33.setBounds(737, 100, 65, 65);
+		lbl33.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI g33 = new ChipGUI(gameControl);
+				refresh();
+				Field n33 = new NumberField(33);
+				Chip c33 = new Chip(n33, g33.getMoney());
+				gameControl.implementField(n33);
+				gameControl.implementChip(c33);
+			}		
+		});
 		panel.add(lbl33);
 		
 		lblRot = new JLabel("Rot");
@@ -748,6 +853,16 @@ public class GameGUI{
 		lblRot.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
 		lblRot.setBackground(new Color(153, 0, 0));
 		lblRot.setBounds(889, 100, 65, 65);
+		lblRot.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI gRot = new ChipGUI(gameControl);
+				refresh();
+				Field hfRot = new HalfField("rot");
+				Chip cRot = new Chip(hfRot, gRot.getMoney());
+				gameControl.implementField(hfRot);
+				gameControl.implementChip(cRot);
+			}		
+		});
 		panel.add(lblRot);
 		
 		lblSchwarz = new JLabel("Schwarz");
@@ -758,6 +873,16 @@ public class GameGUI{
 		lblSchwarz.setBorder(null);
 		lblSchwarz.setBackground(Color.BLACK);
 		lblSchwarz.setBounds(889, 230, 65, 65);
+		lblSchwarz.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI gSchwarz = new ChipGUI(gameControl);
+				refresh();
+				Field hfSchwarz = new HalfField("schwarz");
+				Chip cSchwarz = new Chip(hfSchwarz, gSchwarz.getMoney());
+				gameControl.implementField(hfSchwarz);
+				gameControl.implementChip(cSchwarz);
+			}		
+		});
 		panel.add(lblSchwarz);
 		
 		lblGerade = new JLabel("Gerade");
@@ -767,6 +892,16 @@ public class GameGUI{
 		lblGerade.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
 		lblGerade.setBackground(Color.BLACK);
 		lblGerade.setBounds(152, 310, 260, 65);
+		lblGerade.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI gGerade = new ChipGUI(gameControl);
+				refresh();
+				Field hfGerade = new HalfField("gerade");
+				Chip cGerade = new Chip(hfGerade, gGerade.getMoney());
+				gameControl.implementField(hfGerade);
+				gameControl.implementChip(cGerade);
+			}		
+		});
 		panel.add(lblGerade);
 		
 		lblUngerade = new JLabel("Ungerade");
@@ -776,6 +911,16 @@ public class GameGUI{
 		lblUngerade.setBorder(new BevelBorder(BevelBorder.LOWERED, new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0), new Color(0, 0, 0)));
 		lblUngerade.setBackground(Color.BLACK);
 		lblUngerade.setBounds(542, 310, 260, 65);
+		lblUngerade.addMouseListener(new MouseAdapter(){
+			public void mouseClicked(MouseEvent e){
+				ChipGUI gUngerade = new ChipGUI(gameControl);
+				refresh();
+				Field hfUngerade = new HalfField("ungerade");
+				Chip cUngerade = new Chip(hfUngerade, gUngerade.getMoney());
+				gameControl.implementField(hfUngerade);
+				gameControl.implementChip(cUngerade);
+			}		
+		});
 		panel.add(lblUngerade);
 		
 		lblName = new JLabel(name);
@@ -797,6 +942,19 @@ public class GameGUI{
 		btnBereit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				gameControl.startRound();
+				random = gameControl.getRandom();
+				switch (random){
+					case 0:
+						lbl0.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
+					case 1:
+						
+				}
+					
+				
+				
+				(random == 0){
+					lbl0.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+				}
 			}
 		});
 		btnBereit.setBounds(675, 459, 150, 30);
