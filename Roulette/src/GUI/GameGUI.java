@@ -31,6 +31,8 @@ public class GameGUI{
 	
 	private int random;
 	
+	
+	// JLaels und JButtons werden erstellt
 	public JFrame frame;
 	private JPanel panel;
 	private JLabel lbl0;
@@ -79,17 +81,23 @@ public class GameGUI{
 	private JButton btnBereit;
 	private JLabel lblRunde;
 
+	// Spielername festlegen
 	public void setName(String playerName){
+		// Spielername wird lokal gespeichert für Namen in GUI
 		this.name = playerName;
+		// Spielername an gameControl übergeben
 		gameControl.setName(name);
+		// Name in lblName schreiben
 		lblName.setText(name);
 	}
 	
+	// Geld- und Runden-Label aktualisieren
 	public void refresh(){
 		lblMoney.setText("CHF " + gameControl.getMoney() + ".-");
 		lblRunde.setText("Runde " + gameControl.getRound() + " von 10");
 	}
 	
+	// Rahmen reseten von den Feldern
 	public void resetBorders(){
 		lbl0.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		lbl1.setBorder(BorderFactory.createLineBorder(Color.BLACK));
@@ -134,11 +142,15 @@ public class GameGUI{
 		lblRot.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 	}
 	
+	// Konstruktor
 	public GameGUI(){
+		// initialize wird aufgerufen
 		initialize();
+		// Startgeld wird gesetzt
 		gameControl.setMoney(500);
 	}
 	
+	// Fenster wird initialisiert
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(153, 153, 153));
@@ -160,18 +172,24 @@ public class GameGUI{
 		lbl0.setBackground(new Color(0, 0, 0));
 		lbl0.setBounds(22, 100, 65, 195);
 		lbl0.addMouseListener(new MouseAdapter(){
+			// Klick auf Feld
 			public void mouseClicked(MouseEvent e){
+				// Neues ChipGUI wird initialisiert
 				ChipGUI g0 = new ChipGUI(gameControl);
+				// Wenn Geld auf Feld gesetzt, wird der Rahen grün
 				if (g0.getMoney() != 0){
 					lbl0.setBorder(BorderFactory.createLineBorder(Color.GREEN));
 				}
+				// refresh wird aufgerufen
 				refresh();
+				// Field und Chip wird initialisiert
 				Field n0 = new NumberField(0);
 				Chip c0 = new Chip(n0, g0.getMoney());
 				gameControl.implementField(n0);
 				gameControl.implementChip(c0);
 			}		
 		});
+		// Feld dem Panel hinzufügen
 		panel.add(lbl0);
 		
 		lbl3 = new JLabel("3");
@@ -1076,6 +1094,7 @@ public class GameGUI{
 		});
 		panel.add(lblUngerade);
 		
+		// Label für Spieler-Name
 		lblName = new JLabel(name);
 		lblName.setBackground(new Color(0, 0, 0));
 		lblName.setFont(new Font("Tahoma", Font.PLAIN, 14));
@@ -1083,21 +1102,29 @@ public class GameGUI{
 		lblName.setBounds(10, 459, 150, 30);
 		frame.getContentPane().add(lblName);
 		
+		// Label für Geld
 		lblMoney = new JLabel("CHF 500.-");
 		lblMoney.setForeground(new Color(255, 255, 255));
 		lblMoney.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblMoney.setBounds(200, 459, 150, 30);
 		frame.getContentPane().add(lblMoney);
+		
+		// Button für bereit
 		btnBereit = new JButton("Bereit");
 		btnBereit.setForeground(Color.WHITE);
 		btnBereit.setBackground(new Color(0, 0, 0));
 		btnBereit.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		btnBereit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				// Wenn Button geklickt, wird resetBorders aufgerufen
 				resetBorders();
+				// startRound von gameControl wird aufgerufen
 				gameControl.startRound();
+				// der Variable random wird die Zufallszahl gegeben
 				random = gameControl.getRandom();
+				// refresh wird aufgerufen
 				refresh();
+				// richtige Felder bekommen gelben Rahmen
 				switch (random){
 					case 0:
 						lbl0.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
@@ -1222,6 +1249,7 @@ public class GameGUI{
 					lblRot.setBorder(BorderFactory.createLineBorder(Color.YELLOW));
 				}
 					
+				// Spiel zu Ende --> EndGUI geht auf
 				if(gameControl.gameEnd()){
 					EndGUI endGui = new EndGUI(gameControl);
 				}

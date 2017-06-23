@@ -20,6 +20,7 @@ public class ChipGUI {
 	
 	GameControl gameControl;
 	
+	// 
 	private JDialog frame;
 	private JLabel lblCHF;
 	private int nrField = -1;

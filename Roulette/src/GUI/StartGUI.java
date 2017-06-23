@@ -14,7 +14,8 @@ import javax.swing.JLabel;
 import javax.swing.border.BevelBorder;
 
 public class StartGUI{
-
+	
+	// Elemente von Startfenster
 	private JFrame frame;
 	private JTextField txtName;
 	private JButton btnStart;
@@ -70,8 +71,10 @@ public class StartGUI{
 		btnStart.setForeground(Color.WHITE);
 		btnStart.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				// Wenn "Starten" geklickt wird, öffnet sich GameGUI und StartGUI schliesst sich
 				if(e.getSource() == btnStart){
 					GameGUI gameGUI = new GameGUI();
+					// Name wird GameGUI mitgegeben
 					gameGUI.setName(txtName.getText());
 					frame.dispose();
 				}
