@@ -5,6 +5,7 @@ import DATA.*;
 
 
 public class GameControl{
+	// Felder werden erstellt
 	Wheel wheel = new Wheel();
 	ArrayList<Field> fields = new ArrayList<Field>();
 	ArrayList<Chip> settedChips = new ArrayList<Chip>();
@@ -13,10 +14,12 @@ public class GameControl{
 	
 	int randomNumber;
 	
+	// ArrayList von Chips
 	public void chipOnField(Chip chip){
 		settedChips.add(chip);
 	}
 	
+	// wird überprüft, ob chip auf richtigem Feld liegt
 	public boolean trueField(Chip chip){
 		if(chip.getField().getNumberField() >= 0){
 			if (randomNumber == chip.getField().getNumberField()){
@@ -39,18 +42,22 @@ public class GameControl{
 		}
 	}
 	
+	// getter von Round
 	public int getRound(){
 		return data.getRound();
 	}
 	
+	// setter von Round
 	public void setRound(int round){
 		data.setRound(round);
 	}
 	
+	// getter von Money
 	public int getMoney(){
 		return data.getMoney();
 	}
 	
+	// setter von Money
 	public void setMoney(int money){
 		data.setMoney(money);
 	}

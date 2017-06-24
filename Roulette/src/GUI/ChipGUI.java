@@ -20,21 +20,25 @@ public class ChipGUI {
 	
 	GameControl gameControl;
 	
-	// 
+	// Variabeln werden gesetzt
 	private JDialog frame;
 	private JLabel lblCHF;
 	private int nrField = -1;
 	private String halfField;
 	
+	// settedMoney wird initialisiert
 	private int settedMoney = 0;
 	
+	// Geld aktualisieren 
 	public void updateMoney(){
 		lblCHF.setText("CHF " + settedMoney + ".-");
 	}
 		
-
+	// Konstruktor, GameControl-Objekt wird angefordert
 	public ChipGUI(GameControl gc) {
+		// GameControl-Objekt wird übernommen
 		this.gameControl = gc;
+		// initialize wird aufgerufen
 		initialize();
 	}
 
@@ -65,7 +69,9 @@ public class ChipGUI {
 		JButton btnCHF25 = new JButton("CHF 25");
 		btnCHF25.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				// wenn Button geklickt, Geldwert hochsetzen
 				if(e.getSource() == btnCHF25){
+					// Geld wird nur gesetzt, wenn man mindestens so viel hat 
 					if(gameControl.getMoney()-settedMoney >= 25){
 						settedMoney += 25; 
 						updateMoney();
@@ -117,6 +123,7 @@ public class ChipGUI {
 		btnReset.setBounds(30, 70, 130, 50);
 		btnReset.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				// Geld wird zurückgesetzt
 				if(e.getSource()==btnReset){
 					settedMoney = 0; 
 					updateMoney();
@@ -131,14 +138,10 @@ public class ChipGUI {
 		btnOk.setBounds(30, 200, 130, 50);
 		btnOk.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				// Geld wird von Konto abgezogen
 				if(e.getSource()==btnOk){
-					//if(gameControl.getMoney()>settedMoney){
-						gameControl.setMoney(gameControl.getMoney()-settedMoney);
-						frame.dispose();
-					//}
-					//else{
-						frame.dispose();
-					//}
+					gameControl.setMoney(gameControl.getMoney()-settedMoney);
+					frame.dispose();
 				}
 			}
 		});

@@ -1,5 +1,6 @@
 package DATA;
 
+// Data Interface
 public interface DataTransmission {
 	public String getName();
 	public void setName(String playername);

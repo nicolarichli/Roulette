@@ -18,11 +18,13 @@ public class EndGUI {
 	JLabel lblSpieler;
 	JLabel lblEndbetrag;
 	
+	// Labels aktualisieren
 	public void refresh(){
 		lblSpieler.setText("Das Spiel ist zu Ende!");
 		lblEndbetrag.setText("Endbetrag für " + gameControl.getName() + ": CHF " + gameControl.getMoney() + ".-");
 	}
 
+	// Konstruktor in dem GameControl-Objekt mitgegeben wird
 	public EndGUI(GameControl gc) {
 		gameControl = gc;
 		initialize();
