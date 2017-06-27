@@ -1,22 +1,33 @@
 package LOGIC;
 
-// Oberklasse von allen Feldern
+/**
+ * @author Nicola Richli, Tobias Meier
+ * @version 1.0
+ */
 public class Field {
 	int multiplikator;
 	
-	// getter von Multiplikator
+	/**
+	 * Getter von Multiplikator
+	 * @return 
+	 */
 	public int getMultiplikator(){
 		return 0;
 	}
 	
-	// getter von NumberField
+	/**
+	 * Getter von NumberField
+	 * @return
+	 */
 	public int getNumberField(){
 		return -1;
 	}
 	
-	// getter von HalfField
+	/**
+	 * Getter von HalfField
+	 * @return
+	 */
 	public String getHalfField(){
 		return null;
 	}
-
 }

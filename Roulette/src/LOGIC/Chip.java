@@ -1,21 +1,35 @@
 package LOGIC;
 
+/**
+ * @author Nicola Richli, Tobias Meier
+ * @version 1.0
+ */
 public class Chip {
 	private Field place;
 	private int money;
 	
-	// Konstruktor, Platz und Geld werden übergeben.
+	/**
+	 * Konstruktor von Chip
+	 * @param place
+	 * @param money
+	 */
 	public Chip(Field place, int money){
 		this.place = place;
 		this.money = money;
 	}
 	
-	// Getter von Field
+	/**
+	 * getter von Field
+	 * @return place
+	 */
 	public Field getField(){
 		return place;
 	}
 	
-	// Getter von money
+	/**
+	 * getter von Geld
+	 * @return money
+	 */
 	public int getSettedMoney(){
 		return money;
 	}

@@ -3,7 +3,10 @@ package LOGIC;
 import java.util.ArrayList;
 import DATA.*;
 
-
+/**
+ * @author Nicola Richli, Tobias Meier
+ * @version 1.0
+ */
 public class GameControl{
 	// Felder werden erstellt
 	Wheel wheel = new Wheel();
@@ -14,12 +17,19 @@ public class GameControl{
 	
 	int randomNumber;
 	
-	// ArrayList von Chips
+	/**
+	 * Chips in ArrayList
+	 * @param chip
+	 */
 	public void chipOnField(Chip chip){
 		settedChips.add(chip);
 	}
 	
-	// wird überprüft, ob chip auf richtigem Feld liegt
+	/**
+	 * Feld Richtig Kontrolle
+	 * @param chip
+	 * @return
+	 */
 	public boolean trueField(Chip chip){
 		if(chip.getField().getNumberField() >= 0){
 			if (randomNumber == chip.getField().getNumberField()){
@@ -42,34 +52,57 @@ public class GameControl{
 		}
 	}
 	
-	// getter von Round
+	/**
+	 * Getter von Round
+	 * @return data.getRound
+	 */
 	public int getRound(){
 		return data.getRound();
 	}
 	
-	// setter von Round
+	/**
+	 * Setter von Round
+	 * @param round
+	 */
 	public void setRound(int round){
 		data.setRound(round);
 	}
 	
-	// getter von Money
+	/**
+	 * Getter von Money
+	 * @return data.getMoney()
+	 */
 	public int getMoney(){
 		return data.getMoney();
 	}
 	
-	// setter von Money
+	/**
+	 * Setter von Money
+	 * @param money
+	 */
 	public void setMoney(int money){
 		data.setMoney(money);
 	}
 	
+	/**
+	 * Getter von Name
+	 * @return data.getName()
+	 */
 	public String getName(){
 		return data.getName();
 	}
 	
+	/**
+	 * Setter von Nmae
+	 * @param playerName
+	 */
 	public void setName(String playerName){
 		data.setName(playerName);
 	}
 	
+	/**
+	 * Runde wird gestartet, Runde um 1 erhöht und Kontrolliert, welche Chips richtig sind
+	 */
 	public void startRound(){
 		randomNumber = wheel.randNumber(0, 36);
 		setRound(getRound() + 1);
@@ -81,18 +114,34 @@ public class GameControl{
 		settedChips.clear();
 	}
 	
+	/**
+	 * Felder werden in ArrayList gegeben
+	 * @param field
+	 */
 	public void implementField(Field field){
 		fields.add(field);
 	 }
 	
+	/**
+	 * Chips werden zu gesetzten Chips hinzugefügt
+	 * @param chip
+	 */
 	public void implementChip(Chip chip){
 		settedChips.add(chip);
 	}
 	
+	/**
+	 * Getter von Random
+	 * @return
+	 */
 	public int getRandom(){
 		return randomNumber;
 	}
 	
+	/**
+	 * Spiel fertig
+	 * @return boolean
+	 */
 	public boolean gameEnd(){
 		if(getRound() >= 10 || getMoney() <= 0){
 			return true;

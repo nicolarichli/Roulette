@@ -16,6 +16,10 @@ import javax.swing.SwingConstants;
 
 import LOGIC.GameControl;
 
+/**
+ * @author Nicola Richli, Tobias Meier
+ * @version 1.0
+ */
 public class ChipGUI {
 	
 	GameControl gameControl;

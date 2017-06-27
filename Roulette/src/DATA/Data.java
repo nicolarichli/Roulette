@@ -1,36 +1,58 @@
 package DATA;
 
+/**
+ * @author Nicola Richli, Tobias Meier
+ * @version 1.0
+ */
 public class Data implements DataTransmission{
 	String playerName;
 	int money;
 	int round = 1;
 
-	// setter von Name
+	/**
+	 * Setter von Name
+	 * @param playerName
+	 */
 	public void setName(String playerName) {
 		this.playerName = playerName;
 	}
 
-	// getter von Round
+	/**
+	 * Getter von Round
+	 * @return round
+	 */
 	public int getRound() {
 		return round;
 	}
 
-	// setter von Round
+	/**
+	 * Setter von Round
+	 * @param round
+	 */
 	public void setRound(int round) {
 		this.round = round;
 	}
 
-	// getter von Money
+	/**
+	 * Getter von Money
+	 * @return money
+	 */
 	public int getMoney() {
 		return money;
 	}
 
-	// setter von Money
+	/**
+	 * Setter von Money
+	 * @param money
+	 */
 	public void setMoney(int money) {
 		this.money = money;
 	}
 
-	// getter von Name
+	/**
+	 * Getter von Name
+	 * @return playerName
+	 */
 	public String getName() {
 		return playerName;
 	}

@@ -1,5 +1,9 @@
 package LOGIC;
 
+/**
+ * @author Nicola Richli, Tobias Meier
+ * @version 1.0
+ */
 public class HalfField extends Field{
 	private String name;
 	

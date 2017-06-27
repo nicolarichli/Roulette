@@ -13,6 +13,10 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 import javax.swing.border.BevelBorder;
 
+/**
+ * @author Nicola Richli, Tobias Meier
+ * @version 1.0
+ */
 public class StartGUI{
 	
 	// Elemente von Startfenster

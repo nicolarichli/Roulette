@@ -1,5 +1,9 @@
 package LOGIC;
 
+/**
+ * @author Nicola Richli, Tobias Meier
+ * @version 1.0
+ */
 public class NumberField extends Field {
 	private int number;
 	

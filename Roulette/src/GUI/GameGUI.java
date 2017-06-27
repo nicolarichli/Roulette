@@ -24,6 +24,11 @@ import LOGIC.GameControl;
 import LOGIC.HalfField;
 import LOGIC.NumberField;
 
+
+/**
+ * @author Nicola Richli, Tobias Meier
+ * @version 1.0
+ */
 public class GameGUI{
 
 	String name;
@@ -81,7 +86,10 @@ public class GameGUI{
 	private JButton btnBereit;
 	private JLabel lblRunde;
 
-	// Spielername festlegen
+	/**
+	 * Spielername setzen
+	 * @param playerName
+	 */
 	public void setName(String playerName){
 		// Spielername wird lokal gespeichert für Namen in GUI
 		this.name = playerName;
@@ -91,13 +99,17 @@ public class GameGUI{
 		lblName.setText(name);
 	}
 	
-	// Geld- und Runden-Label aktualisieren
+	/**
+	 * Geld- und Runden-Label aktualisieren
+	 */
 	public void refresh(){
 		lblMoney.setText("CHF " + gameControl.getMoney() + ".-");
 		lblRunde.setText("Runde " + gameControl.getRound() + " von 10");
 	}
 	
-	// Rahmen reseten von den Feldern
+	/**
+	 * Rahmen zurücksetzen
+	 */
 	public void resetBorders(){
 		lbl0.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		lbl1.setBorder(BorderFactory.createLineBorder(Color.BLACK));
@@ -142,7 +154,9 @@ public class GameGUI{
 		lblRot.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 	}
 	
-	// Konstruktor
+	/**
+	 * Konstruktor, öffnet GUI
+	 */
 	public GameGUI(){
 		// initialize wird aufgerufen
 		initialize();
@@ -150,7 +164,9 @@ public class GameGUI{
 		gameControl.setMoney(500);
 	}
 	
-	// Fenster wird initialisiert
+	/**
+	 * Fenster wird initialisiert
+	 */
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(153, 153, 153));
@@ -172,7 +188,9 @@ public class GameGUI{
 		lbl0.setBackground(new Color(0, 0, 0));
 		lbl0.setBounds(22, 100, 65, 195);
 		lbl0.addMouseListener(new MouseAdapter(){
-			// Klick auf Feld
+			/**
+			 * Klick auf Feld
+			 */
 			public void mouseClicked(MouseEvent e){
 				// Neues ChipGUI wird initialisiert
 				ChipGUI g0 = new ChipGUI(gameControl);
